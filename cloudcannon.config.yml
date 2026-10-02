@@ -1,0 +1,11 @@
+paths:
+  static: ''
+  uploads: uploads
+timezone: Australia/Melbourne
+markdown:
+  engine: commonmark
+  options: {}
+collections_config:
+  ashby_projects_site_2:
+    path: ashby-projects-site 2
+    icon: chromecast_2
