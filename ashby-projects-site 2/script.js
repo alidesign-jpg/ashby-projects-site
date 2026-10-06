@@ -3,6 +3,51 @@
   const $ = (s, root = document) => root.querySelector(s);
   const $$ = (s, root = document) => [...root.querySelectorAll(s)];
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const sectionIds = new Set(['home', 'intro', 'events', 'brands', 'stamina', 'nerve', 'in-the-room', 'touring', 'management', 'about', 'contact']);
+  const isHomepage = !!$('#home');
+  const sectionPath = id => id === 'home' ? '/' : '/' + id;
+  function sectionFromUrl(url) {
+    if (url.origin !== location.origin) return null;
+    if (url.hash && ['/', '/index.html'].includes(url.pathname)) {
+      const id = url.hash.slice(1);
+      return sectionIds.has(id) ? id : null;
+    }
+    const id = url.pathname.replace(/^\//, '').replace(/\/$/, '');
+    if (!id || id === 'index.html') return 'home';
+    return sectionIds.has(id) ? id : null;
+  }
+  function scrollToSection(id, behavior = 'instant', focus = false) {
+    const target = $('#' + id);
+    if (!target) return;
+    if (id === 'home') scrollTo({top: 0, behavior});
+    else target.scrollIntoView({behavior});
+    if (focus) { target.tabIndex = -1; target.focus({preventScroll: true}); }
+  }
+  function restoreSection() {
+    if (!isHomepage) return;
+    const id = sectionFromUrl(new URL(location.href));
+    if (!id) return;
+    history.replaceState(history.state, '', sectionPath(id) + location.search);
+    scrollToSection(id);
+  }
+  $$('a[href]').forEach(link => {
+    const id = sectionFromUrl(new URL(link.href));
+    if (id) link.setAttribute('href', sectionPath(id));
+  });
+  document.addEventListener('click', e => {
+    if (!isHomepage || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const link = e.target.closest('a[href]');
+    if (!link || link.target || link.hasAttribute('download')) return;
+    const url = new URL(link.href), id = sectionFromUrl(url);
+    if (!id) return;
+    e.preventDefault();
+    history.pushState(null, '', sectionPath(id) + url.search);
+    scrollToSection(id, reduced.matches ? 'instant' : 'smooth', true);
+  });
+  restoreSection();
+  addEventListener('load', restoreSection, {once: true});
+  addEventListener('popstate', restoreSection);
+  addEventListener('hashchange', restoreSection);
   const media = 'assets/media/';
   const sandboxUrl = 'https://www.eventbrite.com.au/e/sandbox-music-festival-melbourne-tickets-1991427952614';
   const events = [
@@ -124,14 +169,7 @@
       if (open) $('a', nav).focus({preventScroll:true}); else if(returnFocus) toggle.focus({preventScroll:true});
     }
     toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
-    $$('a', nav).forEach(link => link.addEventListener('click', e => {
-      const href = link.getAttribute('href'); setMenu(false, false);
-      if (href.startsWith('#') && $(href)) {
-        e.preventDefault(); const target = $(href);
-        target.scrollIntoView({behavior: reduced.matches ? 'instant' : 'smooth'});
-        history.pushState(null, '', href); target.tabIndex = -1; target.focus({preventScroll:true});
-      }
-    }));
+    $$('a', nav).forEach(link => link.addEventListener('click', () => setMenu(false, false)));
     document.addEventListener('keydown', e => {
       if(toggle.getAttribute('aria-expanded') !== 'true') return;
       if(e.key === 'Escape') setMenu(false);
@@ -217,12 +255,12 @@
     const items=[
       ...events.map(e=>({title:e.name,type:'Event',detail:e.meta,href:eventHref(e)})),
       {title:'All events',type:'Archive',detail:'Previous events and flyers',href:'events.html'},
-      {title:'Stamina',type:'Club',detail:'Saturday · Platform One · Hard techno',href:'index.html#stamina'},
-      {title:'Nerve',type:'Club',detail:'Friday · Brown Alley · Techno',href:'index.html#nerve'},
-      ...['Brianna Baxter','Panic','Four To Eight'].map(title=>({title,type:'Artist',detail:'Artist management',href:'index.html#management'})),
-      ...tours.map(tour=>({title:tour.name,type:'Touring',detail:'Touring and bookings',href:'index.html#touring'})),
-      {title:'About Ashby',type:'Information',detail:'Naarm / Melbourne · Independent events',href:'index.html#about'},
-      {title:'Enquiries',type:'Contact',detail:'Bookings and partnerships',href:'index.html#contact'}
+      {title:'Stamina',type:'Club',detail:'Saturday · Platform One · Hard techno',href:sectionPath('stamina')},
+      {title:'Nerve',type:'Club',detail:'Friday · Brown Alley · Techno',href:sectionPath('nerve')},
+      ...['Brianna Baxter','Panic','Four To Eight'].map(title=>({title,type:'Artist',detail:'Artist management',href:sectionPath('management')})),
+      ...tours.map(tour=>({title:tour.name,type:'Touring',detail:'Touring and bookings',href:sectionPath('touring')})),
+      {title:'About Ashby',type:'Information',detail:'Naarm / Melbourne · Independent events',href:sectionPath('about')},
+      {title:'Enquiries',type:'Contact',detail:'Bookings and partnerships',href:sectionPath('contact')}
     ];
     const normalize=text=>text.toLowerCase().normalize('NFKD').replace(/ø/g,'o').replace(/[\u0300-\u036f]/g,'');
     function closeSearch(){searchBox.hidden=true;search.setAttribute('aria-expanded','false');}

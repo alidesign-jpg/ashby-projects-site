@@ -1,0 +1,14 @@
+{
+  "routes": [
+    {
+      "from": "^/home/?$",
+      "to": "/",
+      "status": 301
+    },
+    {
+      "from": "^/(intro|events|brands|stamina|nerve|in-the-room|touring|management|about|contact)/?$",
+      "to": "/index.html",
+      "status": 200
+    }
+  ]
+}

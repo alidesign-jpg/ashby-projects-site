@@ -52,3 +52,5 @@ Konnect Festival — Lilly Palmer was added to the event archive with the suppli
 Doruksen's flyer fills its frame without side borders.
 
 The homepage features Sandbox Music Festival and Brianna Baxter’s Asia tour side by side. Both use flyer frames matching the archive column dimensions; narrower screens stack the featured entries. The tour flyer links to the complete nine-date schedule.
+
+Homepage section links use clean paths such as /about and /stamina; the homepage stays at /. Old hash links are normalized on arrival. _cloudcannon/routing.json serves index.html for the listed section paths so direct visits and refreshes work on CloudCannon.
