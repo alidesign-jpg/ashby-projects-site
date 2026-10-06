@@ -37,12 +37,18 @@ Club cards use the existing Stamina and Nerve photography with aligned title, de
 Stamina weekly tickets: https://www.eventbrite.com.au/e/stamina-melbourne-2026-tickets-1600248278679
 Nerve weekly tickets: https://www.eventbrite.com.au/e/nerve-melbourne-2026-tickets-949590128637
 
-The Stamina and Nerve logo SVGs embed the original artwork and apply a white display mask, preserving the original mark shapes while making the photo background transparent. Generated image cutouts were inspected and discarded because their edges were not clean enough.
+The Stamina and Nerve logo SVGs embed the supplied transparent PNG artwork. Nerve's transparent margins are cropped by its SVG viewBox. Stamina is displayed in white with a CSS filter. Both marks have matching visible widths and left alignment, preserving their original proportions.
 
 The one shared Stamina/Nerve carousel supports touch swiping, mouse dragging, arrow buttons, keyboard navigation and a photo viewer. It has a position indicator and respects reduced motion.
 
 Brianna Baxter's supplied Asia tour flyer is included in the event archive and its own event page, with all nine dates transcribed from the flyer. The homepage events section and artist profile link to the tour. No tour year or missing venue was inferred; Delhi and Bengaluru remain TBA.
 
 Touring cards have equal portrait and name panels. Clicking or keyboard-activating a card opens its description and enquiry link; descriptions stay out of the card grid. Niotech uses an initial capital throughout. The header wordmark and announcement text share the same centred axis, with tickets and search adapting to narrow screens.
+
+The touring roster starts with Stan Christ, then VORTEK'S, followed by AREA ØNE, THISO and Niotech. Stan Christ and VORTEK'S use the supplied portraits and bios. The desktop grid keeps three equal columns with matching card sizes across rows. Only the first three artists appear initially; See More Artists reveals the rest, and See Fewer Artists collapses the roster again.
+
+Konnect Festival — Lilly Palmer was added to the event archive with the supplied flyer and Facebook page. Its 12 November 2022 date is confirmed by Ashby's original event archive: https://www.ashbyprojects.com.au/events/event-two-hja4s . The exact venue is not supplied, so the listing uses Naarm / Melbourne.
+
+Doruksen's flyer fills its frame without side borders.
 
 The homepage features Sandbox Music Festival and Brianna Baxter’s Asia tour side by side. Both use flyer frames matching the archive column dimensions; narrower screens stack the featured entries. The tour flyer links to the complete nine-date schedule.
