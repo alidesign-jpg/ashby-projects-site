@@ -218,6 +218,7 @@ body:has(dialog[open]){overflow:hidden}.lightbox{background:#10110e;color:white;
   mix-blend-mode: normal;
 }
 .brand-story { min-width: 0; }
+#stamina .brand-detail-logo { filter: brightness(0) invert(1); }
 .brand-story p { margin: 0 0 18px; }
 .brand-story .detail-tag { margin-top: 24px; line-height: 1.6; }
 .club-ticket-link {
@@ -285,6 +286,8 @@ body:has(dialog[open]){overflow:hidden}.lightbox{background:#10110e;color:white;
 .event-detail-poster img[src$='sandbox-afterparty-1080x1350.jpg'] { transform: scaleX(1.305); }
 .poster-art > img[src$='overtime-flyer-1080x1350.jpg'],
 .event-detail-poster img[src$='overtime-flyer-1080x1350.jpg'] { transform: scale(1.006); }
+.poster-art > img[src$='doruksen-flyer-1080x1350.jpg'],
+.event-detail-poster img[src$='doruksen-flyer-1080x1350.jpg'] { transform: scaleX(1.341); }
 .event-detail-poster { overflow: hidden; }
 @media (max-width: 900px) {
   .touring-list { grid-template-columns: 1fr; max-width: 540px; margin: 0 auto; }
@@ -335,6 +338,9 @@ body:has(dialog[open]){overflow:hidden}.lightbox{background:#10110e;color:white;
 
 
 /* Artist cards open their descriptions in an accessible profile dialog. */
+.tour-record[hidden], .tour-more[hidden] { display: none; }
+.tour-more { margin-top: 24px; gap: 26px; background: transparent; cursor: pointer; }
+.tour-more-symbol { font-size: 20px; line-height: 1; }
 .tour-profile { display: flex; flex-direction: column; width: 100%; height: 100%; border: 0; padding: 0; background: transparent; color: inherit; text-align: left; cursor: pointer; }
 .tour-profile .tour-record-content { width: 100%; }
 .tour-name { display: block; background: transparent; color: inherit; padding: 0; font-size: clamp(30px, 3vw, 46px); font-weight: 500; letter-spacing: -.045em; margin: 18px 0; line-height: 1.1; }
