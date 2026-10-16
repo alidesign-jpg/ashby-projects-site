@@ -54,3 +54,5 @@ Doruksen's flyer fills its frame without side borders.
 The homepage features Sandbox Music Festival and Brianna Baxter’s Asia tour side by side. Both use flyer frames matching the archive column dimensions; narrower screens stack the featured entries. The tour flyer links to the complete nine-date schedule.
 
 Homepage section links use clean paths such as /about and /stamina; the homepage stays at /. Old hash links are normalized on arrival. _cloudcannon/routing.json serves index.html for the listed section paths so direct visits and refreshes work on CloudCannon.
+
+16 October 2026 feedback: updated homepage, club and business copy; removed Naarm from public site text. Charlie Sparks presents ELEKTRA is the lead featured event and first upcoming event, using the supplied flyer and Hardware Group presale link. Dates and venues follow the supplied flyer; no year is inferred. On mobile (up to 700px), featured and archive flyers show two per row, the archive action is a compact link, and management cards share a 4:5 frame. Desktop flyer grids retain their existing layout.
