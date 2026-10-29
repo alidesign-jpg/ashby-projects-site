@@ -453,3 +453,20 @@ body:has(dialog[open]){overflow:hidden}.lightbox{background:#10110e;color:white;
   .tour-profile .tour-record-content { min-height: 0; padding: 10px 6px; }
   .tour-profile .tour-name { min-height: 2.4em; }
 }
+
+/* Featured event flyers: match the standard 4:5 poster frame. */
+#featured-events .featured-poster {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  height: auto;
+  overflow: hidden;
+}
+#featured-events .featured-poster > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+}
