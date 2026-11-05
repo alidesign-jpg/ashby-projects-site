@@ -510,3 +510,33 @@ body:has(dialog[open]){overflow:hidden}.lightbox{background:#10110e;color:white;
   .legal-content { line-height: 1.75; }
   .legal-content h2 { font-size: 21px; margin-top: 34px; padding-top: 22px; }
 }
+
+/* Clubcasa joins the club family; full-length event artwork stays readable. */
+.clubcasa-card { background: linear-gradient(180deg, #170e0755, #070d0de8), url('assets/media/clubcasa-opening-2026.png') center / cover; }
+.clubcasa-detail { background: #171815; }
+.clubcasa-layout { display: grid; grid-template-columns: minmax(0, .65fr) minmax(0, 1.35fr); align-items: start; gap: 6vw; padding-top: 38px; }
+.clubcasa-detail-art { display: block; width: 100%; max-width: 320px; height: auto; }
+.clubcasa-story { max-width: 680px; }
+.clubcasa-story h2 { font-family: var(--display); font-size: clamp(38px, 5.4vw, 76px); font-weight: 500; letter-spacing: -.045em; line-height: 1; margin: 22px 0; }
+.clubcasa-story p { font-size: 15px; line-height: 1.8; }
+.clubcasa-facts { margin: 26px 0 0; }
+.clubcasa-facts > div { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 18px; padding: 14px 0; border-top: 1px solid #4d5343; }
+.clubcasa-facts dt { font-size: 10px; line-height: 1.8; letter-spacing: .08em; text-transform: uppercase; color: var(--green); }
+.clubcasa-facts dd { margin: 0; font-size: 14px; line-height: 1.6; }
+.clubcasa-story .text-link { display: flex; width: max-content; max-width: 100%; margin-top: 24px; }
+.poster-art > img.flyer-uncropped,
+#featured-events .featured-poster > img.flyer-uncropped { object-fit: contain; object-position: center; background: #05090a; }
+.event-detail-poster img.flyer-uncropped { width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; }
+@media (min-width: 701px) {
+  .brand-grid, .club-links { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .brand-grid .brand-title { font-size: clamp(32px, 3.5vw, 52px); }
+  .brand-card { padding: 22px; }
+  .brand-card-top { font-size: 8px; gap: 12px; }
+}
+@media (max-width: 700px) {
+  .clubcasa-layout { grid-template-columns: minmax(0, 1fr); gap: 30px; padding-top: 24px; }
+  .clubcasa-detail-art { max-width: 280px; }
+  .clubcasa-story h2 { font-size: clamp(36px, 10vw, 58px); }
+  .clubcasa-facts > div { grid-template-columns: 100px minmax(0, 1fr); gap: 12px; }
+  .clubcasa-story .club-ticket-link { font-size: 9px; max-width: 100%; line-height: 1.6; }
+}

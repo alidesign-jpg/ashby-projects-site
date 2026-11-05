@@ -16,7 +16,7 @@
       "status": 301
     },
     {
-      "from": "^/(intro|events|brands|stamina|nerve|in-the-room|touring|management|about|contact)/?$",
+      "from": "^/(intro|events|brands|stamina|nerve|clubcasa|in-the-room|touring|management|about|contact)/?$",
       "to": "/index.html",
       "status": 200
     }

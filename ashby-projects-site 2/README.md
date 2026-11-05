@@ -14,7 +14,7 @@ Sandbox date, venue and ended status were checked against the supplied Eventbrit
 Sandbox lineup was checked against the promoter's Resident Advisor listing: https://ra.co/events/2465116
 The supplied official festival flyer is in use, including its support lineup.
 
-Flyer derivatives are actual 1080 × 1350 JPEG canvases with full artwork preserved. The original files remain available. The hero video and other unused assets remain in the assets folder but are no longer displayed. Club Casa has been removed from all pages.
+Flyer derivatives are actual 1080 × 1350 JPEG canvases with full artwork preserved. The original files remain available. The hero video and other unused assets remain in the assets folder but are no longer displayed. Clubcasa has been restored as a new club with its own opening-night event.
 
 Sandbox afterparty listing: https://www.eventbrite.com.au/e/sandbox-official-after-party-tickets-2001808209241
 
@@ -62,3 +62,5 @@ Mobile artist grid: management and touring use three equal columns up to 700px. 
 28 October 2026: replaced the lead Elektra flyer with the supplied Melbourne artwork. The listing now uses the eventflo Melbourne ticket link and confirmed 20 February 2027 date, The Timber Yard venue, and 3 PM–11 PM AEDT time. Removed the superseded presale signup copy. Source: https://eventflo.io/event/elektre2027melbourne
 
 5 November 2026: added terms and conditions and privacy policy pages from the supplied document, with readable sections, footer links on all pages, and search results. The existing hello@ashbyprojects.com.au contact fills the terms placeholder and Privacy Officer contact. Clean routes /terms-and-conditions and /privacy-policy are served through the CloudCannon routing configuration.
+
+5 November 2026: Clubcasa joins Stamina and Nerve in the club section, with an opening-night event, /clubcasa route, search result, weekly-club link and Typeform presale signup. Opening details follow the supplied flyer: 5 December 2026, every Saturday 9pm–5am, 29 Fitzroy Street, St Kilda. Updated the existing Sikoti NYE event with the supplied full flyer and Eventbrite ticket link; its verified time is 6pm–1am on 31 December 2026 at Melbourne Pavilion. All three upcoming events appear in featured and upcoming listings and are excluded from previous events.
