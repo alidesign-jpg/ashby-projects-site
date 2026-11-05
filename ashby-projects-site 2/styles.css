@@ -512,7 +512,7 @@ body:has(dialog[open]){overflow:hidden}.lightbox{background:#10110e;color:white;
 }
 
 /* Clubcasa joins the club family; full-length event artwork stays readable. */
-.clubcasa-card { background: linear-gradient(180deg, #170e0755, #070d0de8), url('assets/media/clubcasa-opening-2026.png') center / cover; }
+.clubcasa-card { color: #fff; background: linear-gradient(180deg, #170e0755, #070d0de8), url('assets/media/clubcasa-opening-2026.png') center / cover; }
 .clubcasa-detail { background: #171815; }
 .clubcasa-layout { display: grid; grid-template-columns: minmax(0, .65fr) minmax(0, 1.35fr); align-items: start; gap: 6vw; padding-top: 38px; }
 .clubcasa-detail-art { display: block; width: 100%; max-width: 320px; height: auto; }
