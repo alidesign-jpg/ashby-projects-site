@@ -60,3 +60,5 @@ Homepage section links use clean paths such as /about and /stamina; the homepage
 Mobile artist grid: management and touring use three equal columns up to 700px. Each card shows a matching 4:5 portrait and name, with labels, enquiry copy and tour badges kept in the full tap-to-open profile. Touring still shows the priority three first, with See More Artists revealing the remaining roster.
 
 28 October 2026: replaced the lead Elektra flyer with the supplied Melbourne artwork. The listing now uses the eventflo Melbourne ticket link and confirmed 20 February 2027 date, The Timber Yard venue, and 3 PM–11 PM AEDT time. Removed the superseded presale signup copy. Source: https://eventflo.io/event/elektre2027melbourne
+
+5 November 2026: added terms and conditions and privacy policy pages from the supplied document, with readable sections, footer links on all pages, and search results. The existing hello@ashbyprojects.com.au contact fills the terms placeholder and Privacy Officer contact. Clean routes /terms-and-conditions and /privacy-policy are served through the CloudCannon routing configuration.

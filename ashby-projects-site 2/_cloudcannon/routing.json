@@ -1,6 +1,16 @@
 {
   "routes": [
     {
+      "from": "^/terms-and-conditions/?$",
+      "to": "/terms.html",
+      "status": 200
+    },
+    {
+      "from": "^/privacy-policy/?$",
+      "to": "/privacy.html",
+      "status": 200
+    },
+    {
       "from": "^/home/?$",
       "to": "/",
       "status": 301

@@ -264,7 +264,9 @@
       ...['Brianna Baxter','Panic','Four To Eight'].map(title=>({title,type:'Artist',detail:'Artist management',href:sectionPath('management')})),
       ...tours.map(tour=>({title:tour.name,type:'Touring',detail:'Touring and bookings',href:sectionPath('touring')})),
       {title:'About Ashby',type:'Information',detail:'Melbourne · Independent events',href:sectionPath('about')},
-      {title:'Enquiries',type:'Contact',detail:'Bookings and partnerships',href:sectionPath('contact')}
+      {title:'Enquiries',type:'Contact',detail:'Bookings and partnerships',href:sectionPath('contact')},
+      {title:'Terms & conditions',type:'Information',detail:'Tickets, entry requirements, event conduct and refunds',href:'/terms-and-conditions'},
+      {title:'Privacy policy',type:'Information',detail:'Personal information, privacy, cookies and complaints',href:'/privacy-policy'}
     ];
     const normalize=text=>text.toLowerCase().normalize('NFKD').replace(/ø/g,'o').replace(/[\u0300-\u036f]/g,'');
     function closeSearch(){searchBox.hidden=true;search.setAttribute('aria-expanded','false');}
