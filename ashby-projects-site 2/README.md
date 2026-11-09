@@ -64,3 +64,7 @@ Mobile artist grid: management and touring use three equal columns up to 700px. 
 5 November 2026: added terms and conditions and privacy policy pages from the supplied document, with readable sections, footer links on all pages, and search results. The existing hello@ashbyprojects.com.au contact fills the terms placeholder and Privacy Officer contact. Clean routes /terms-and-conditions and /privacy-policy are served through the CloudCannon routing configuration.
 
 5 November 2026: Club Casa joins Stamina and Nerve in the club section, with an opening-night event, /clubcasa route, search result, weekly-club link and Typeform presale signup. Opening details follow the supplied flyer: 5 December 2026, every Saturday 9pm–5am, 29 Fitzroy Street, St Kilda. Updated the existing Sikoti NYE event with the supplied full flyer and Eventbrite ticket link; its verified time is 6pm–1am on 31 December 2026 at Melbourne Pavilion. All three upcoming events appear in featured and upcoming listings and are excluded from previous events.
+
+
+## Yasmin Gardezi, t e s t p r e s s & BURNR — 22 January 2027
+Added the supplied flyer to the homepage, upcoming events, event detail and search. Venue: The Timber Yard, Port Melbourne; Eventflo lists a 5 PM AEDT start. The ticket button links to the user-supplied Eventflo resale page and is labelled Resale Tickets.
