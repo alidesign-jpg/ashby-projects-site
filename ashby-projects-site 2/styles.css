@@ -540,3 +540,14 @@ body:has(dialog[open]){overflow:hidden}.lightbox{background:#10110e;color:white;
   .clubcasa-facts > div { grid-template-columns: 100px minmax(0, 1fr); gap: 12px; }
   .clubcasa-story .club-ticket-link { font-size: 9px; max-width: 100%; line-height: 1.6; }
 }
+
+/* Club Casa and SIKOTI flyers fill their 4:5 frames without letterboxing. */
+.poster-art > img.flyer-full-bleed,
+#featured-events .featured-poster > img.flyer-full-bleed,
+.event-detail-poster img.flyer-full-bleed {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+}
