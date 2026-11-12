@@ -70,12 +70,13 @@
     {"id":"nerve-teletech-2024","name":"Nerve — Teletech Australia After Party","meta":"13 December 2024 · Brown Alley, Melbourne","flyer":"nerve-teletech-2024-1080x1350.jpg","status":"EVENT ENDED","description":"The Teletech Australia afterparty at Nerve, Brown Alley, Melbourne. Friday 13 December 2024, 10 PM – 6 AM. Secret guests, plus Nerve residents.","lineup":["Secret guests","Nerve residents"],"url":"https://www.eventbrite.com.au/e/nerve-teletech-australia-after-party-tickets-1108889491319"},
     {id:'konnect-lilly-palmer',name:'Konnect Festival — Lilly Palmer',meta:'12 November 2022 · Melbourne',flyer:'konnect-lilly-palmer.jpg',status:'PAST EVENT',description:'Lilly Palmer (GER) headlines Konnect’s warehouse boiler room event in Melbourne. Ashby Projects collaborated with BUMP, Budai and Evolution Events to bring the show to Melbourne.',lineup:['Lilly Palmer (GER)'],supports:['Luke Alessi','Handsdown','Sunshine','Steve Bleas','Nick Young','Rob Anthony','Sammy La Marca','Erica Dal','S4FD','Andre James','Jeremy Jake','Tomohiro','Hunter Demase','Flyte 44','Bailey Packham','Jono Iapi'],platform:'Facebook',linkLabel:'VIEW FESTIVAL PAGE',url:'https://www.facebook.com/konnectfestivalaus/'}
   ];
-  const leadEvent = events.find(e => e.id === 'elektra-australia');
+  const leadEvent = events.find(e => e.id === 'yasmin-gardezi-testpress-burnr-2027');
   const asiaTour = events.find(e => e.id === 'brianna-baxter-asia-tour');
   const sikotiEvent = events.find(e => e.id === 'sikoti-nye-2026');
   const clubcasaEvent = events.find(e => e.id === 'clubcasa-opening-2026');
   const yasminEvent = events.find(e => e.id === 'yasmin-gardezi-testpress-burnr-2027');
-  const upcomingEvents = [leadEvent, clubcasaEvent, sikotiEvent, yasminEvent].filter(Boolean);
+  const charlieEvent = events.find(e => e.id === 'elektra-australia');
+  const upcomingEvents = [leadEvent, clubcasaEvent, sikotiEvent, charlieEvent].filter(Boolean);
   const upcomingIds = new Set(upcomingEvents.map(e => e.id));
   const eventHref = e => 'event.html?event=' + e.id;
   const poster = e => e.flyer ? `<img src="${media + e.flyer}" alt="${e.name} event flyer"${e.flyerFit === 'contain' ? ' class="flyer-uncropped"' : ''} width="1080" height="1350" loading="lazy">` : '<div class="sandbox-poster" role="img" aria-label="Sandbox Music Festival 2026"><span>MELBOURNE / 2026</span><strong>SAND<br>BOX.</strong><div>MUSIC FESTIVAL<br><b>25.09.26</b></div></div>';
